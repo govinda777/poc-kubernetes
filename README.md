@@ -68,7 +68,7 @@ kubectl apply --recursive
 
 ![img](./docs/arquitetura.jpeg)
 
-## Como criar/atualiza o $- <Cluster> -$
+## Como criar/atualiza o $- <--Cluster--> -$
 
 ```cmd
 
