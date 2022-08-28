@@ -1,0 +1,25 @@
+{
+  "name": "poc-kubernetes",
+  "version": "1.0.0",
+  "description": "Implementacao de arquitetura simples utilizando Kubernetes",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "install": "snap install kubectl --classic && snap install minikube",
+    "deploy": "cd src && make deploy",
+    "delete": "cd src && make delete",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govinda777/poc-kubernetes.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/govinda777/poc-kubernetes/issues"
+  },
+  "homepage": "https://github.com/govinda777/poc-kubernetes#readme"
+}
