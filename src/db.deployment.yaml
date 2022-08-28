@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db
+  labels:
+    app: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+      tier: db
+  template:
+    metadata:
+      labels:
+        app: app
+        tier: db
+    spec:
+      containers:
+        - image: luangovinda/db:latest
+          name: db-container
+          env:
+            - name: POSTGRES_DB
+              value: postgres
+            - name: POSTGRES_USER
+              value: user
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key: root_password
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - name: db-volume
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: db-volume
+          persistentVolumeClaim:
+            claimName: db-volume

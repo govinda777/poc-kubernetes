@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: db-config
-data:
-  POSTGRES_PASSWORD: brainweb
-  POSTGRES_USER: brainweb
-  POSTGRES_DB: postgres
