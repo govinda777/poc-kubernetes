@@ -1,6 +1,6 @@
 # PostgreSQL in Kubernetes
 
-This repository contains an example of a stateful postgreSQL instance running in kubernetes. This example is designed to work with Google Cloud Platform's GKE.
+Projeto de exemplo para rodar o PostgreSQL no Kubernetes com a execução automátiva do script de inicializacao.
 
 ## Como aplicar
 
@@ -16,7 +16,7 @@ make delete
 
 ## Como se conectar no banco
 
-* Veja qual é o ip para acessar o pod
+* Utilize o ip do balanceador
 
 kubectl get nodes -o wide
 
@@ -27,6 +27,7 @@ kubectl get service
 https://github.com/ryderdamen/postgres_in_kubernetes
 
 
+## Como atualizar a imagem docker
 
 docker build -f postgres.Dockerfile . -t luangovinda/db:latest
 
@@ -34,11 +35,10 @@ docker push luangovinda/db:latest
 
 docker pull luangovinda/db:latest
 
+## Como executar o container
+
 docker run -it luangovinda/db:latest
 
+## Como entrar dentro do POD
+
 kubectl exec -it postgres-5cfb879499-ggmtd -- bash
-
-kubectl exec -it postgres-5cfb879499-br8k8 -- psql -h localhost -d $POSTGRES_DB -U $POSTGRES_USER -p 5432 -f /docker-entrypoint-initdb.d/initschema.sql
-
-
-psql -h localhost -d $POSTGRES_DB -U $POSTGRES_USER -p 5432 -f /docker-entrypoint-initdb.d/initschema.sql
