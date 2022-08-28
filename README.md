@@ -48,6 +48,10 @@ kubectl apply --recursive
 
     $ kubectl get nodes -o wide
 
+    $ kubectl get configmap
+
+    $ kubectl describe configmap db-config
+
 # Delete 
 
     $ kubectl delete -f primeiro-pod.yaml
