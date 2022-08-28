@@ -34,7 +34,7 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 
 # Cria tudo
 
-    $ kubectl apply --recursive
+    $ kubectl apply -f . --recursive
 
 # Deleta tudo
 
@@ -98,13 +98,17 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 
 ```
 
-## Como compilar imagen 
+## Como atualizar uma imagem
+
+```cmd
 
 docker build . -t luangovinda/db
 
 docker image tag db:latest luangovinda/db:latest
 
 docker push luangovinda/db
+
+```
 
 ## Referencia
 
