@@ -15,7 +15,23 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 - 1 Banco de dados Postgre > PARA - Testes integrados
 - 
 
-## 
+## Como instalar as dependencias
+
+```cmd
+    $ sudo npm install
+```
+
+## Como criar o cluster
+
+```cmd
+    $ npm run deploy
+```
+
+## Como deletar o cluster
+
+```cmd
+    $ npm run delete
+```
 
 ## Comandos
 
