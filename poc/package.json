@@ -1,0 +1,20 @@
+{
+  "name": "kubernetes",
+  "version": "1.0.0",
+  "description": "Projeto de exemplo para a criação de uma arquitetura simples em Kuberneter.",
+  "main": "index.js",
+  "scripts": {
+    "apply": "echo Construindo cluster ......",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "#Kuberneter",
+    "#EKS",
+    "#Pods",
+    "#Escalabilidade",
+    "#Ambientes",
+    "#Infra-as-Code"
+  ],
+  "author": "",
+  "license": "MIT"
+}
