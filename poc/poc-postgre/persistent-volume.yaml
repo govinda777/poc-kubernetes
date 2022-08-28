@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: example-postgres
+  name: postgres
   labels:
-    app: example-app
+    app: app
 spec:
   accessModes:
     - ReadWriteOnce

@@ -2,9 +2,13 @@
 
 This repository contains an example of a stateful postgreSQL instance running in kubernetes. This example is designed to work with Google Cloud Platform's GKE.
 
-## Como executar
+## Como aplicar
 
 make deploy
+
+## Como deletar
+
+make delete
 
 ## Porta utilizada
 

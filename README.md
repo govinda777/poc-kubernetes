@@ -70,6 +70,8 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 
     $ kubectl delete svc --all
 
+    $ kubectl delete pods --all && kubectl delete svc --all && kubectl delete secret --all
+
 # Como entrar dentro do pod
 
     $ kubectl exec -it portal-noticias -- bash

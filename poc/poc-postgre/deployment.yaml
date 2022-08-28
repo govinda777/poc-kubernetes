@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-postgres
+  name: postgres
   labels:
-    app: example-app
+    app: app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: example-app
+      app: app
       tier: postgres
   template:
     metadata:
       labels:
-        app: example-app
+        app: app
         tier: postgres
     spec:
       containers:
@@ -27,7 +27,7 @@ spec:
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: example-postgres-secrets
+                  name: postgres-secrets
                   key: root_password
             - name: PGDATA
               value: /var/lib/postgresql/data/pgdata
@@ -40,4 +40,4 @@ spec:
       volumes:
         - name: postgres-stateful-data
           persistentVolumeClaim:
-            claimName: example-postgres
+            claimName: postgres
