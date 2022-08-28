@@ -26,6 +26,8 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 
 # Cria um pod
 
+kubectl apply --recursive
+
     $ kubectl apply -f primeiro-pod.yaml
 
 # Comandos de get
@@ -66,6 +68,21 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 
 ![img](./docs/arquitetura.jpeg)
 
+## Como criar/atualiza o $- <Cluster> -$
+
+```cmd
+
+    $ npm run apply
+
+```
+
+## Como apagar o $- <Cluster> -$
+
+```cmd
+
+    $ npm run destroy
+
+```
 
 ## Referencia
 
