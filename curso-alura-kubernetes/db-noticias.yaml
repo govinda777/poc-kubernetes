@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: db-noticias-container
-      image: aluracursos/mysql-db:1
+      image: mysql:latest
       ports:
         - containerPort: 3306
       envFrom:
