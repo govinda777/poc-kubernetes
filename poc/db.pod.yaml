@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: db-container
-      image: postgres:11.12
+      image: postgres:11.6
       ports:
         - containerPort: 5432
       envFrom:

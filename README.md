@@ -24,11 +24,21 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 
     $ minikube start
 
+* UI 
+
+    $ minikube dashboard
+
 # Cria um pod
 
-kubectl apply --recursive
-
     $ kubectl apply -f primeiro-pod.yaml
+
+# Cria tudo
+
+    $ kubectl apply --recursive
+
+# Deleta tudo
+
+    $ kubectl delete pods --all && kubectl delete svc --all
 
 # Comandos de get
 
@@ -87,6 +97,14 @@ kubectl apply --recursive
     $ npm run destroy
 
 ```
+
+## Como compilar imagen 
+
+docker build . -t luangovinda/db
+
+docker image tag db:latest luangovinda/db:latest
+
+docker push luangovinda/db
 
 ## Referencia
 
