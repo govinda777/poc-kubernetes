@@ -76,7 +76,7 @@ kubectl apply --recursive
 
 ```
 
-## Como apagar o $- <Cluster> -$
+## Como apagar o $- <--Cluster--> -$
 
 ```cmd
 
