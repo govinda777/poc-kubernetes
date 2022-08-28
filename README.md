@@ -122,13 +122,23 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 
 ```cmd
 
-docker build . -t luangovinda/db
+docker build . -t luangovinda/db:latest
 
 docker image tag db:latest luangovinda/db:latest
 
-docker push luangovinda/db
+docker push luangovinda/db:latest
+
+docker pull luangovinda/db:latest
 
 ```
+
+## Como executar uma imagem container
+
+docker run -it luangovinda/db:latest
+
+## Como entrar dentro do POD
+
+kubectl exec -it postgres-5cfb879499-ggmtd -- bash
 
 ## Referencia
 
@@ -136,3 +146,4 @@ Curso Alura: https://cursos.alura.com.br/course/kubernetes-pods-services-configm
 
 Componentes Kubernetes: [Componentes Kubernetes](./README--Componentes_Kubernetes--.md)
 
+Repo exemplo: https://github.com/ryderdamen/postgres_in_kubernetes

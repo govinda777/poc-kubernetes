@@ -1,4 +1,4 @@
-FROM postgres:latest
+FROM postgres:11.12
 
 COPY initschema.sql /docker-entrypoint-initdb.d/
 ENV POSTGRES_USER docker
