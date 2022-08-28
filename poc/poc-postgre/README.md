@@ -25,3 +25,14 @@ kubectl get service
 ## Repo original 
 
 https://github.com/ryderdamen/postgres_in_kubernetes
+
+
+
+docker build -f postgres.Dockerfile . -t luangovinda/db:latest
+
+docker push luangovinda/db:latest
+
+docker pull luangovinda/db:latest
+
+docker run -it luangovinda/db:latest
+
