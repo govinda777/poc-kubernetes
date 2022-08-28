@@ -18,6 +18,7 @@ spec:
     spec:
       containers:
         - image: luangovinda/db:latest
+          #command: ["psql -h localhost -d $POSTGRES_DB -U $POSTGRES_USER -p 5432 -f /docker-entrypoint-initdb.d/initschema.sql" ]
           name: postgres
           env:
             - name: POSTGRES_DB
@@ -33,7 +34,6 @@ spec:
               value: /var/lib/postgresql/data/pgdata
           ports:
             - containerPort: 5432
-              name: postgres
           volumeMounts:
             - name: postgres-stateful-data
               mountPath: /var/lib/postgresql/data
