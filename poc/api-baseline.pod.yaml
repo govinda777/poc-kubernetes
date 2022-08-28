@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-1
+  name: api-baseline
   labels:
-    app: servico-noticias
+    app: api-baseline
 spec:
   containers:
-    - name: container-pod-1
+    - name: api-baseline-container
       image: nginx:latest
       ports:
         - containerPort: 80

@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-1
+  name: api-order
   labels:
-    app: servico-noticias
+    app: api-order
 spec:
   containers:
-    - name: container-pod-1
+    - name: api-order-container
       image: nginx:latest
       ports:
         - containerPort: 80

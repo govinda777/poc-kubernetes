@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-test
+  labels:
+    app: db-test
+spec:
+  containers:
+    - name: db-test-container
+      image: postgres:11.12
+      ports:
+        - containerPort: 5432
+      envFrom:
+        - configMapRef:
+            name: db-test-config

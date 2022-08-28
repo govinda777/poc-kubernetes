@@ -20,6 +20,9 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 ![img](./docs/quem-nao-cola.jpeg)
 
 ```cmd
+# Iniciar
+
+    $ minikube start
 
 # Cria um pod
 
