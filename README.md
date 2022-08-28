@@ -86,7 +86,7 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 
 ```cmd
 
-    $ npm run apply
+    $ kubectl apply --recursive
 
 ```
 
@@ -94,7 +94,7 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 
 ```cmd
 
-    $ npm run destroy
+    $ kubectl delete pods --all && kubectl delete svc --all
 
 ```
 
