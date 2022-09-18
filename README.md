@@ -38,7 +38,8 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 ![img](./docs/quem-nao-cola.jpeg)
 
 ```cmd
-# Iniciar
+
+# Iniciar o cluster
 
     $ minikube start
 
