@@ -44,7 +44,7 @@ minikube start
 
     $ minikube start
 
-* UI 
+* Abrir a UI 
 
     $ minikube dashboard
 
@@ -141,6 +141,16 @@ docker run -it luangovinda/db:latest
 ## Como entrar dentro do POD
 
 kubectl exec -it postgres-5cfb879499-ggmtd -- bash
+
+## Como verificar se o serviço Build cache node está no ar
+
+Entre no pod:
+
+kubectl exec -it pod-1 -- bash
+
+Faça um CURL:
+
+curl -sw \\n --fail-with-body --show-error http://<Balanceador_IP>:5071/ping
 
 ## Referencia
 

@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: build-cache-node
+spec:
+  selector:
+    app: gradle-enterprise
+    component: build-cache-node
+  ports:
+  - name: build-cache-node
+    port: 5071
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: build-cache-node
+  labels:
+    app: gradle-enterprise
+    component: build-cache-node
+spec:
+  selector:
+    matchLabels:
+      app: gradle-enterprise
+      component: build-cache-node
+  serviceName: build-cache-node
+  template:
+    metadata:
+      labels:
+        app: gradle-enterprise
+        component: build-cache-node
+    spec:
+      containers:
+      - name: build-cache-node
+        image: gradle/build-cache-node:16.1
+        args: [ "start" ]
+        ports:
+        - containerPort: 5071
+        resources:
+          requests:
+            memory: 1Gi
+            cpu: 0.5
+          limits:
+            memory: 2Gi
+            cpu: 1.5
+        env:
+        - name: EXCLUSIVE_VOLUME_SIZE
+          value: "10Gi"
+        volumeMounts:
+        - mountPath: /data
+          name: build-cache-node-data-volume
+  volumeClaimTemplates:
+  - metadata:
+      name: build-cache-node-data-volume
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: '10Gi'
+      storageClassName: 'standard'
