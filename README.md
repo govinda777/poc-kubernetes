@@ -5,7 +5,6 @@
   <img alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="./docs/banner.jpeg">
 </picture>
 
-
 # PROJETO : poc-kubernetes
 
 Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
@@ -13,13 +12,15 @@ Objetivo: implementar uma poc com kubernetes onde seja possivel rodar:
 - 2 Aplicações REST Java
 - 1 Banco de dados Postgre > PARA - Testes manuais
 - 1 Banco de dados Postgre > PARA - Testes integrados
-- 
 
-## Como instalar as dependencias
+## Instalar as dependencias
 
-```cmd
-    $ sudo npm install
-```
+kubectl
+minikube
+
+## Iniciar o cluster
+
+minikube start
 
 ## Como criar o cluster
 
